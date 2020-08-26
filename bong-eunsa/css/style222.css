@@ -79,34 +79,6 @@ nav{
 .menu_box li+li{
 	padding-left: 80px;
 }
-.fixed {
-    background: rgba(255,255,255,0.6);
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-}
-
-/* media navi */
-
-.menuNav ul:after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
-@media(min-width: 768px){
-    .menuBtn{
-        display: none;
-    }
-    .menuNav{
-        display: block !important;
-    }
-    .menuNav li{
-        float: left;
-        width:auto;
-    }
-}
-
-
 
 /* section01 */
 
@@ -163,9 +135,24 @@ nav{
     background-size: cover;
     position: relative;
 }
-.sec02-article{
-    padding-bottom: 4%;
-}
+/* .sec02-con1{
+    width: 100%;
+    height: 441px;
+    background: url(../images/section02-contents01.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 50px;
+} */
+
+/* section02-leftbox */
+/* .sec02-leftbox{
+    position: absolute;
+    width: 24%;
+    left: 0;
+    top: 0;
+} */
 .con1-tab_box>li{
     margin-bottom: 1.5px;
 }
@@ -185,7 +172,7 @@ nav{
     position: absolute;
     width:24%;
 }
-.sec02-rightbox1{
+.sec02-rightbox{
     width:100%;
     height: 441px;
     background: url(../images/section02-contents01.png);
@@ -193,53 +180,31 @@ nav{
     background-position: center;
     background-size: cover;
 }
-.sec02-rightbox2{
-    width:100%;
-    height: 441px;
-    background: url(../images/section02-contents02.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: none;
+/* select-area */
+
+.con1-tab_box>li:nth-child(1){
+    display: block;
+    line-height: 87px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 22px;
+    font-weight: 400;
+    padding-left: 30px;
 }
-.sec02-rightbox3{
-    width:100%;
-    height: 441px;
-    background: url(../images/section02-contents03.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: none;
-}
-.sec02-rightbox4{
-    width:100%;
-    height: 441px;
-    background: url(../images/section02-contents04.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: none;
-}
-.sec02-rightbox5{
-    width:100%;
-    height: 441px;
-    background: url(../images/section02-contents05.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: none;
-}
+
+/* section02-rightbox */
 .rightbox-line{
+    width: 80%;
     height: 1px;
     background: #fff;
     margin: 29px 0;
-    width:28% !important;
 }
-.sec02-rightbox>h3 , .sec02-rightbox>h5 , .sec02-rightbox>div{
-    margin-left: 66%;
-}
-.sec02-rightbox>h3{
-    padding-top: 189px;
+.sec02-rightbox{
+    position: relative;
+    width: 38%;
+    left: 24%;
+    padding-left: 38%;
+    top: 189px;
 }
 .right-title{
     font-size: 40px;
@@ -252,8 +217,6 @@ nav{
     line-height: 130%;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
-
-
 
 /* section03 */
 
@@ -504,9 +467,6 @@ nav{
 
 
 @media(max-width:1400px){
-    nav{
-        width:95%;
-    }
     /* all */
     .maintitle{
         font-size: 24px;
@@ -533,25 +493,49 @@ nav{
 
     /* section02 */
     .sec02-con1{
-        height: 176px;
+        height: 350px;
     }
     .sec02-leftbox{
         position: relative;
-        top: 0;
+        top: -45%;
     }
     .sec02-leftbox{
-        width:100%;
+        width: 100%;
     }
     .con1-tab_box>li{
         line-height: 40px;
         font-size: 16px;
         float: left;
         margin: 0 1% 1% 0;
-        width:46.5%;
+        width: 46.5%;
+        padding-left: 3%;
+    }
+    .con1-tab_box>li:hover {
+        border: none;
+        height: 40px;
+      }
+    
+
+    .con1-tab_box>li:nth-child(1){
+        line-height: 40px;
+        font-size: 16px;
+        float: left;
+        margin: 0 1% 1% 0;
+        width: 46.5%;
         padding-left: 3%;
     }
     .con1-tab_box>li:nth-child(2n){
         margin: 0 0 1% 0;
+    }
+    .sec02-header{
+        padding-bottom: 160px;
+    }
+    .sec02-rightbox{
+        position: absolute;
+        width:97%;
+        left: 3%;
+        padding-left: 0;
+        top: 160px;
     }
     .right-title{
         font-size: 30px;
@@ -563,16 +547,6 @@ nav{
         width:50%;
     }
 
-
-    .rightbox-line{
-        height: 1px;
-        background: #fff;
-        margin: 29px 0;
-        width:28% !important;
-    }
-    .sec02-rightbox>h3 , .sec02-rightbox>h5 , .sec02-rightbox>div{
-        margin-left: 3%;
-    }
     
 }
 
@@ -644,36 +618,19 @@ nav{
 
 }
 @media(max-width:768px){
-
-    /* section01 */
-    .slide-2{
-        background-position: right center;
+    /* menu_box */
+    nav li a{ 
+        display: none;
     }
-    .sec01-titlebox{
-        padding: 60% 0 0 0;
-    }
-    .sec01-titlebox>h1{
-        padding-bottom: 34%;
-    }
-    .sec01-titlebox>h2{
-        font-size: 40px;
-    }
-    .sec01-titlebox>h1{
-        font-size: 60px;
+    .menu_box{
+        height: 0px;
     }
 
-    /* section02 */
-    .sec02-rightbox2{
-        background-position: right center;
-    }
     /* section03 */
-
     .section03-scroll-down{
         left: 39%;
     }
-
     /* section05 */
-
     .sec05-contents{
         flex-direction: column;
     }
@@ -684,23 +641,17 @@ nav{
 }
 @media(max-width:520px){
     /* section01 */
-
+    .sec01-titlebox{
+        padding: 60% 0 0 0;
+    }
+    .sec01-titlebox>h1{
+        padding-bottom: 34%;
+    }
     .sec01-titlebox>h2{
         font-size: 30px;
     }
     .sec01-titlebox>h1{
         font-size: 50px;
-    }
-    
-    /* section02 */
-    .sec02-rightbox1 , .sec02-rightbox2, .sec02-rightbox3, .sec02-rightbox4, .sec02-rightbox5{
-        height: 300px;
-    }
-    .sec02-rightbox>h3{
-        padding-top: 100px;
-    }
-    .rightbox-line{
-        width:55% !important;
     }
     /* section03 */
     .section03-scroll-down{
@@ -734,16 +685,6 @@ nav{
     .sec01-titlebox>h1{
         font-size: 40px;
     }
-
-    /* section02 */
-
-    .rightbox-line{
-        width:60% !important;
-    }
-
-    /* section03 */
-
-
     .section03-scroll-down{
         left: 30%;
     }
