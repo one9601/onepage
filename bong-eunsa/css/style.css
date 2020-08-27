@@ -10,9 +10,11 @@ body{
 
 /**메뉴부분 마우스 오버시 색상 **/
 .menu_box li a:hover{
-	border-bottom:3px solid #0c4606; 
-	padding-bottom:8px;
-    color:#0c4606;}
+	/* border-bottom:3px solid #0c4606; 
+	padding-bottom:8px; */
+    color:#0c4606;
+}
+    
     
 /* all */
 .sec-header{
@@ -42,6 +44,20 @@ body{
 }
 
 /* menu_box */
+.menuNav ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.menuNav li a{
+    display: block;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+}
+.menuNav li+li{
+    margin-left: 80px;
+}
 
 
 .menu_box{
@@ -51,24 +67,16 @@ body{
 	background-color: #fff;
 	z-index: 99999999999;
 }
-.menu_box>nav>ul{
+.header{
+    width:66%;
+    margin: 0 auto;
+}
+.logo img{
+    height: 91px;
+    float: left;
+}
+.menu_box nav>ul{
 	float : right;
-}
-.menu_box li{
-	float:left;
-	text-align:center;
-}
-	
-.logo a{
-	float: left;
-}
-.menu_box img{
-	width:110px;
-	height: 91px;
-}
-nav{
-	width:66%;
-	margin: 0 auto;
 }
 .menu_box li a{
 	color:#000; 
@@ -76,38 +84,78 @@ nav{
 	font-size: 22px;
 	font-family: 'SDKukdetopokki-Lt'
 }
-.menu_box li+li{
-	padding-left: 80px;
-}
 .fixed {
     background: rgba(255,255,255,0.6);
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
-}
-
-/* media navi */
-
-.menuNav ul:after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
-@media(min-width: 768px){
+} 
+/* min= 768이 되기전에는~ 하지말아라! */
+@media(min-width:1400px){  
+    /* 토글 버튼 */
     .menuBtn{
         display: none;
     }
+    /* 네비게이션  */
     .menuNav{
+        /* important는 지정한 스타일의 속성이 중요하기 때문에 변경을 막기위해 지정한다. */
         display: block !important;
     }
     .menuNav li{
         float: left;
-        width:auto;
+        width:auto
     }
 }
+@media(max-width:1400px){
+    .menu_box{
+        background-color: inherit;
+    }
+    /* 토글버튼 */
+    .menuBtn{
+        padding: 6px 10px 2px;
+        border: 1px solid #aaaaaa;
+        border-radius: 5px;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    /* 클릭시 배경색 변경 */
+    .menuBtn:hover{
+        background-color: #dddddd;
+    }
+    /* 파란색 테두리 제거  */
+    .menuBtn:focus{
+        outline: none;
+    }
+    .menuBtn i {
+        color: #888888;
+    }
 
+    /* 토글버튼 글자 숨기기 */
+    .menuBtn span{
+        display: inline-block;
+        text-indent: -999px;
+    }
+    .menuNav{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .menu_box nav>ul{
+        float: left !important;
+        padding-right: 30%;
+    }
 
+    .menuNav li+li{
+        margin-left: 0;
+    }
+    .menuNav li{
+        padding-left: 20px;
+    }
+    .header{
+        width:100% !important;
+    }
 
+}
 /* section01 */
 
 .slide-1{
