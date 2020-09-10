@@ -48,6 +48,7 @@ body{
     content: "";
     display: block;
     clear: both;
+<<<<<<< HEAD
 }
 .menuNav li a{
     display: block;
@@ -55,6 +56,15 @@ body{
     font-size: 14px;
     text-decoration: none;
 }
+=======
+}
+.menuNav li a{
+    display: block;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+}
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 .menuNav li+li{
     margin-left: 80px;
 }
@@ -186,7 +196,11 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     padding-top: 21%;
+=======
+    padding-top: 19.5%;
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 }
 .sec01-titlebox>h2{
     font-size: 60px;
@@ -212,7 +226,11 @@ body{
     position: relative;
 }
 .sec02-article{
+<<<<<<< HEAD
     padding-bottom: 6%;
+=======
+    padding-bottom: 4%;
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 }
 .con1-tab_box>li{
     margin-bottom: 1.5px;
@@ -226,6 +244,7 @@ body{
     font-size: 22px;
     font-weight: 400;
 }
+<<<<<<< HEAD
 .con1-tab_box>li:first-child{
     display: block;
     line-height: 87px;
@@ -235,6 +254,8 @@ body{
     font-size: 22px;
     font-weight: 400;
 }
+=======
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 .sec02-con1{
     position: relative;
 }
@@ -326,7 +347,10 @@ body{
 .sec03-article{
     display: flex;
     position: relative;
+<<<<<<< HEAD
     padding-bottom: 3%;
+=======
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 }
 
 .subtxt-bg{
@@ -341,12 +365,21 @@ body{
     padding-left: 10%;
     font-size: 18px;
     font-weight: 400;
+<<<<<<< HEAD
 }
 .section03-scroll-down{
     position: absolute;
     top: 89%;
     left: 45%;
 }
+=======
+}
+.section03-scroll-down{
+    position: absolute;
+    top: 89%;
+    left: 45%;
+}
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 
 /* section04 */
 
@@ -361,7 +394,10 @@ body{
 }
 .sec04-article{
     display: flex;
+<<<<<<< HEAD
     padding-bottom: 2%;
+=======
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 }
 .sec04-article>div{
     width: 49%;
@@ -381,6 +417,10 @@ body{
     background: url(../images/sec04-con1.png);
     background-position: center;
     background-repeat: no-repeat;
+<<<<<<< HEAD
+=======
+    background-size: cover;
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 }
 .sec04-con2{
     width:100%;
@@ -425,7 +465,10 @@ body{
     height: 72px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 /* section04 hover */
 
 .sec04-contents>div:hover .sec04-overlay {
@@ -446,7 +489,10 @@ body{
   }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
   /* section05 */
 
 #section05{
@@ -462,9 +508,12 @@ body{
     display: flex;
     padding-bottom: 5%;
 }
+<<<<<<< HEAD
 .sec05-article{
     padding-bottom: 2%;
 }
+=======
+>>>>>>> e5df1c8745f81073a5503da3fc284aeeae48879f
 .sec05-contents>div+div{
     margin-left: 1%;
 }
