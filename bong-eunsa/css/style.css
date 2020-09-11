@@ -46,9 +46,8 @@ body{
     border: 4px solid #fff;
     border-radius: 50px;
     left: 50%;
-    top: 92%;
-    margin-top: -50px;
-    transform: translate(-50%, 0%);
+    top: 90%;
+    transform: translate(-50%, -50%);
     z-index: 9;
 }
 #mouse::after{
@@ -153,7 +152,7 @@ body{
     bottom: 0;
 }
 
-.menuBtn.active span:nth-of-type(1){
+/* .menuBtn.active span:nth-of-type(1){
     transform: translateY(20px) rotate(-45deg);
     -webkit-transform: translateY(20px) rotate(-45deg);
 }
@@ -163,7 +162,7 @@ body{
 .menuBtn.active span:nth-of-type(3){
     transform: translateY(-20px) rotate(45deg);
     -webkit-transform: translateY(-20px) rotate(45deg);
-}
+} */
 
 /* min= 768이 되기전에는~ 하지말아라! */
 @media(min-width:1400px){  
@@ -179,7 +178,7 @@ body{
 }
 @media(max-width:1400px){
     .menu_box{
-        background-color: inherit;
+        height: 40px;
     }
     .menu_box nav>ul{
         background-color: #fff;
@@ -271,6 +270,13 @@ body{
     position: relative;
     padding-bottom: 5%;
 }
+.sec02-rightbox{
+    animation: fadeEffect 1s;
+  }
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  } 
 .sec02-article{
     padding-bottom: 6%;
 }
@@ -295,12 +301,17 @@ body{
     font-size: 22px;
     font-weight: 400;
 }
+.sec02-article{
+    display: flex;
+}
 .sec02-con1{
+    width: 24%;
+    height: 441px;
     position: relative;
 }
 .sec02-leftbox{
     position: absolute;
-    width:24%;
+    width:100%;
 }
 .sec02-rightbox1{
     width:100%;
@@ -388,7 +399,6 @@ body{
     position: relative;
     padding-bottom: 3%;
 }
-
 .subtxt-bg{
     width:45%;
     height: 581px;
@@ -683,7 +693,7 @@ body{
     .slide-1 , .slide2, #section02, #section03, #section05{
         padding-bottom: 10%;
     }
-    #section04, #section0{
+    #section04{
         padding-bottom: 15%;
     }
     /* all */
@@ -711,15 +721,16 @@ body{
     }
 
     /* section02 */
+    .sec02-article{
+        display: inherit;
+    }
+    .sec02-con1{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
     .sec02-con1{
         height: 176px;
-    }
-    .sec02-leftbox{
-        position: relative;
-        top: 0;
-    }
-    .sec02-leftbox{
-        width:100%;
     }
     .con1-tab_box>li{
         line-height: 40px;
@@ -769,11 +780,11 @@ body{
 
 @media(max-width:1000px){
     /* mouse */
-    .slide-1 , .slide2, #section02, #section03,#section05{
+    .slide-1 , .slide-2, #section02, #section03,#section05{
         padding-bottom: 15%;
     }
     #section04>#mouse{
-        top: 95%;
+        top: 94%;
     }
 
     /* section03  */
@@ -846,19 +857,30 @@ body{
 }
 @media(max-width:768px){
     /* mouse */
-    .slide-1 , .slide2, #section02, #section03, #section04, #section05{
+    .slide-1 , .slide-2, #section02, #section04, #section05{
         padding-bottom: 18%;
+    }
+    #section03{
+        padding-bottom: 15%;
+    }
+    #section03>#mouse{
+        top: 92%;
+    }
+    #section04>#mouse{
+        top: 93%;
     }
     #mouse{
         width: 30px;
         height: 50px;
     }
     #mouse>p{
+        width: 180px;
         font-size: 21px;
-        margin-left: -62px;
+        margin-left: -62.5px;
     }
+
     #section05>#mouse{
-        top: 96%;
+        top: 95%;
     }
     /* section01 */
     .slide-2{
@@ -907,7 +929,6 @@ body{
         width: 20px;
         height: 30px;
         border: 3px solid #fff;
-        margin-left: -10px;
     }
     #mouse::after{
         width: 8px;
@@ -922,11 +943,14 @@ body{
         width: 200px;
         font-weight: bold;
     }
-    #section04>#mouse , #section05>#mouse{
-        top: 98%;
+    #section04>#mouse{
+        top: 96.5%;
+    }
+    #section05>#mouse{
+        top: 96%;
     }
     #section03>#mouse{
-        top: 95%;
+        top: 92%;
     }
     @keyframes mouse{
         0%{
@@ -967,6 +991,24 @@ body{
     /* mouse */
     .slide-1 , .slide-2, #section02, #section03, #section04, #section05{
         padding-bottom: 25%;
+    }
+    /* mouse */
+    #mouse::after{
+        margin-left: -3.6px;
+    }
+    #mouse>p{
+        margin-left: -59px;
+    }
+
+    @keyframes mouse{
+        0%{
+            top: 2px;
+            opacity: 1;
+        }
+        100%{
+            top: 17px;
+            opacity: 0;
+        }
     }
     /* section01 */
     .sec01-titlebox>h2{
