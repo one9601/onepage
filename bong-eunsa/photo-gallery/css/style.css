@@ -1,0 +1,283 @@
+@font-face { font-family: 'SDKukdetopokki-Lt'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff'); font-weight: normal; font-style: normal; }
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+
+body{
+	font-family: 'NanumBarunGothic', sans-serif;
+}
+/* header 시작 */
+.header{
+    width: 100%;
+    height: 420px;
+    background: url(../images/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+.header-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1 ;
+}
+.header-textbox{
+    position: absolute;
+    font-family: 'SDKukdetopokki-Lt';
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 2 ;
+}
+.header-textbox h1{
+    color: #fff;
+    font-size: 50px;
+}
+/* header 끝 */
+
+/* gallery-container 시작 */
+.gallery-article{
+    width: 66%;
+    margin: 0 auto;
+}
+.gallery-box{
+    width: 100%;
+    height: 299px;
+    display: flex;
+}
+.gallery-container{
+    margin-top: 30px;
+}
+.gallery-box{
+    border-top: 3px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 30px 0;
+}
+.gallery-bg1{
+    background: url(../images/header-bg0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 50%;
+    margin : 0 20px;
+}
+.gallery-textbox{
+    margin: 0 20px;
+    width: 50%;
+}
+.gallery-textbox>p:first-child{
+    font-size: 25px;
+    height: 50px;
+}
+.gallery-textbox>p:nth-child(2){
+    font-size: 32px;
+    height: 215px;
+}
+.gallery-textbox>p:last-child{
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+.gallery-textbox span{
+    color: #666;
+}
+
+/* gallery-container 끝 */
+
+/* gallery-list 시작 */
+.gallery-list{
+    width: 100%;
+    height: 464px;
+    padding-top: 20px;
+}
+.list-box1 ,.list-box2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.list-box3{
+    display: flex;
+    margin-bottom: 20px;
+}
+.list-box3>div+div{
+    margin-left: 1.5%;
+}
+.bg-box{
+    width: 29%;
+    height: 564px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.bg-box>.img1{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+.bg-box>.img2{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-box>.img3{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-box>.img4{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-box>.img5{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-box>.img6{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-box>.img7{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-box>.img8{
+    width: 100%;
+    height: 464px;
+    background: url(../images/bg7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-box .img-text{
+    position: absolute;
+    top: 105%;
+}
+.img-text p:first-child{
+    font-size: 14px;
+    color: #666;
+    height: 50px;
+}
+.img-text p:last-child{
+    font-size: 18px;
+    color: #181818;
+    width: 216px;
+}
+
+@media(max-width:767px){
+    /* gallery-list 시작 */
+    .list-box1 ,.list-box2 ,.list-box3{
+        flex-direction: column;
+    }
+    .bg-box{
+        width: 100%;
+    }
+    .img-text{
+        left: 50%;
+        transform:translateX(-50%)
+    }
+    .img-text p{
+        text-align: center;
+    }
+    /* gallery-list 끝 */
+    /* gallery article 시작*/
+    .gallery-box{
+        flex-direction: column;
+        height: auto;
+    }
+    .gallery-bg1{
+        width: 100%;
+        margin: 0;
+    }
+    .gallery-textbox{
+        margin: 20px 0 0 0;
+        width: 100%;
+        text-align: center;
+    }
+    .gallery-textbox>p:nth-child(2){
+        height: 50px;
+    }
+
+    .gallery-article{
+        width: 80%;
+    }
+    /* gallery article 끝 */
+
+    .list-box1 ,.list-box2 ,.list-box3{
+        margin-bottom: 0;
+    }
+    .list-box1>div{
+        margin-bottom: 20px;
+    }
+    .list-box2>div{
+        margin-bottom: 20px;
+    }
+    .list-box3>div{
+        margin-bottom: 20px;
+    }
+    .list-box3>div+div{
+        margin-left: 0 !important;
+    }
+    .bg-box{
+        padding: 0;
+    }
+}
+@media(max-width:600px){
+    /* header 시작 */
+    .header{
+        height: 300px;
+    }
+    .header-textbox h1{
+        font-size: 35px;
+    }
+    /* header 끝 */
+
+    /* gallery article 시작*/
+    .gallery-textbox p:first-child{
+        font-size: 16px;
+    }
+    .gallery-textbox p:nth-child(2){
+        font-size: 22px;
+    }
+
+}
+@media(max-width:420px){
+    .header-textbox h1{
+        font-size: 27px;
+    }
+}
