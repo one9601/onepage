@@ -396,27 +396,65 @@ body{
 }
 .sec03-article{
     display: flex;
-    position: relative;
     padding-bottom: 3%;
 }
-.subtxt-bg{
-    width:45%;
-    height: 581px;
-    background: #e8e4e1;
-    margin-left: 1%;
+.sec03-map{
+    width: 60%;
+}
+.sec03-map img{
+    width: 100%;
+    height: 570px;
 }
 
-.subtxt-bg li{
-    line-height: 53px;
-    padding-left: 10%;
-    font-size: 18px;
-    font-weight: 400;
+/* 아코디언 메뉴 */
+.sec03-acodian{
+    margin-left: 2%;
+    width: 38%;
+    height: 570px;
+    overflow: auto;
 }
-.section03-scroll-down{
-    position: absolute;
-    top: 89%;
-    left: 45%;
+.sec03-dt, .sec03-dd { 
+    padding: 20.5px; 
 }
+.sec03-dt { 
+    background-color: #bedc69; 
+    color: #181818;
+    border-bottom: 1px solid #fff;
+}
+.sec03-dt span{
+    font-size: 16px;
+}
+
+.sec03-dt span:before { 
+    display: inline-block; 
+    content: "";
+    border-top: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;;
+    vertical-align: middle; 
+    margin-right: 20px;
+    transition: all 0.4s;
+ }
+.sec03-dt.on span:before {
+    transform: rotate(-90deg);
+}
+
+.sec03-dd{ 
+    background-color: #fff; 
+    display: none; 
+}
+
+.sec03-dd-title{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 0 10px 0;
+}
+.sec03-dd-text{
+    line-height: 20px;
+}
+
+
+  /* 아코디언 메뉴 끝 */
 
 /* section04 */
 
@@ -792,22 +830,14 @@ body{
     .sec03-article{
         flex-direction: column;
     }
-    .sec03-map>img{
+    .sec03-map{
         width:100%;
     }
-    .subtxt-bg{
-        width:100%;
-        height: 300px;
+    .sec03-acodian{
         margin-left: 0;
+        width: 100%;
+        height: 600px;
         overflow: auto;
-        margin-bottom: 5%;
-    } 
-    .subtxt-bg li{
-        padding-left: 3%;
-        font-size: 16px;
-    }
-    .subtxt-bg li:nth-last-child(){
-        padding-bottom: 5%;
     }
 
     /* sectioon04 */
@@ -904,9 +934,8 @@ body{
         background-position: right center;
     }
     /* section03 */
-
-    .section03-scroll-down{
-        left: 39%;
+    .sec03-map img{
+        max-width: 100%;
     }
 
     /* section05 */
@@ -920,6 +949,10 @@ body{
 @media(max-width:600px){
     .slide-1 , .slide-2, #section02, #section03, #section04, #section05{
         padding-bottom: 21%;
+    }
+    .sec03-map img{
+        margin-bottom: 20px;
+        height: 470px;
     }
 
 }
@@ -981,6 +1014,10 @@ body{
     .rightbox-line{
         width:55% !important;
     }
+    /* section03 */
+    .sec03-map img{
+        height: auto;
+    }
     /* section04 */
     .gallery{
         flex-direction: column;
@@ -1023,6 +1060,7 @@ body{
     .rightbox-line{
         width:60% !important;
     }
+
 }
 @media(max-width:400px){
     .rightbox-line{
