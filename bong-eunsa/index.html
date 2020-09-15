@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>봉은사</title>
+<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<!-- reset css -->
+<link rel="stylesheet" href="css/style.css">
+<!-- main css -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- swiper -->
+<link rel="stylesheet" href="css/kakaomap.css">
+<!-- kakaomapstyle css -->
+</head>
+<body>
+    <!-- modal -->
+    <div id="myModal" class="Modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p style="text-align:center;">
+                <span style="font-size: 14px;">
+                    <b>
+                        <span style="font-size: 24px;">
+                            공지사항</span></b></span></p>
+            <p style="text-align: center; line-height:1.5;"><br>100% 직접 촬영하고, 편집한 사이트 입니다.</p>
+            <p><br></p>
+            <div style="cursor: pointer; text-align: center; padding-bottom:10px; padding-top:10px; background: #0c4606; color: #fff;" onclick="close_pop();">
+                <span class="pop_bt" style="font-size: 13px;">
+                    닫기
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <script>
+        jQuery(document).ready(function(){
+            $("#myModal").show();
+        });
+
+        // 팝업 close 기능
+
+        function close_pop(flag){
+            $("#myModal").hide();
+        };
+
+    </script>
+
+    <!-- modal end -->
+
+    <div id="section01">
+        <div class="menu_box">
+            <div class="header">
+                <!-- <button type="button" class="menuBtn">
+                    <i><img src="images/menuicon.png" alt="햄버거/고스트버튼" style="widows: 20px; height:20px;"/></i><span>MENU</span>
+                </button> -->
+                <a href="##" class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="logo">
+                    <a href="#section01"><img src="images/logo.png" alt=""></a>
+                </div>
+                <nav class="menuNav" id="menuNav">
+                    <ul>
+                        <li><a href="#section01">메인</a></li>
+                        <li><a href="#section02">소개</a></li>
+                        <li><a href="#section03">조감도</a></li>
+                        <li><a href="#section04">사진첩</a></li>
+                        <li><a href="#section05">주변 볼거리</a></li>
+                        <li><a href="#section06">오시는길</a></li>
+                    </ul>
+                </nav>
+                <script>
+                    jQuery(document).ready(function(){
+                        jQuery(".menuBtn").click(function(){
+                            // slideToggle은 요소의 height 값을 조작해서 움직임을 만들어낸다. 보이면 안보이게, 안보이면 보이게 처리한다.
+                            jQuery(".menuNav").slideToggle();
+                        });
+                    });
+                </script>
+                <script>
+                    if (jQuery(window).width() > 0) {
+                    jQuery(window).on("scroll",function(ev){
+                    if(jQuery(window).scrollTop() > 150 ) { /**높이 픽셀 조정**/
+                        jQuery('.menu_box').addClass('fixed');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+                    }
+                    else{
+                    jQuery('.menu_box').removeClass('fixed');
+                    }
+                    return false;
+                    });
+                }
+                </script>
+            </div>
+            <!-- nav end -->
+            </div>
+        <!-- Swiper -->
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide sec01-title">
+                    <div class="sec01-titlebox slide-1">
+                        <h2>도심 속에서의 기도</h2>
+                        <h1>봉은사</h1>
+                    </div>
+                    <div id="mouse">
+                        <p>SCROLL-DOWN</p>
+                    </div>
+                </div>
+                <div class="swiper-slide sec01-title">
+                    <div class="sec01-titlebox slide-2">
+                        <h2>6.29 ~ 9.3 펼쳐지는</h2>
+                        <h1>봉은사 연꽃축제</h1>
+                    </div>
+                    <div id="mouse">
+                        <p>SCROLL-DOWN</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next next-btn"></div>
+            <div class="swiper-button-prev prev-btn"></div>
+        </div>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper1', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+            delay: 2500,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+        </script>
+    </div>
+
+    <div id="section02">
+        <div id="mouse">
+            <p>SCROLL-DOWN</p>
+        </div>
+        <div class="wrap sec02-wrap">
+            <div class="sec02-header sec-header">
+                <h1 class="maintitle">소개</h1>
+                <h3 class="subtitle">봉은사는 전통문화체험관 준공, 중창불사 원만성취 천일기도 입재, 지역법회 창립<br>
+                    사회복지법인 봉은 서초지역 자활센터, 양재종합사회복지관, 판교노인종합복지관을 위탁받은 절입니다.</h3>
+            </div>
+            <div class="section02 sec02-article sec-article">
+                <div class="sec02-con1">
+                    <div class="sec02-leftbox">
+                        <ul class="con1-tab_box">
+                            <li class="tab01"><a href="#1">봉은사 인사말</a></li>
+                            <li class="tab02"><a href="#1">봉은사 활동</a></li>
+                            <li class="tab03"><a href="#1">봉은비전</a></li>
+                            <li class="tab04"><a href="#1">우수 운영사찰</a></li>
+                            <li class="tab05"><a href="#1">불교용품</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-wrap"></div>
+                    <div class="sec02-rightbox sec02-rightbox1">
+                        <h3 class="right-title">봉은사 인사말</h3>
+                        <div class="rightbox-line"></div>
+                        <h5 class="right-subtitle">역사문화 공간으로 지역사회와<br>
+                            공감하는 행복한 신행활동<br>
+                            환경 만들겠습니다.</h5>
+                    </div>
+                    <div class="sec02-rightbox sec02-rightbox2">
+                        <h3 class="right-title">봉은사 활동</h3>
+                        <div class="rightbox-line"></div>
+                        <h5 class="right-subtitle">현재 대웅전을 비롯하여 여러 사찰들이<br>
+                            대중적 포교활동과 사회복지를<br>
+                            실현하는 도심 대찰의 위상을<br>
+                            이어가고 있습니다.</h5>
+                    </div>
+                    <div class="sec02-rightbox sec02-rightbox3">
+                        <h3 class="right-title">봉은비전</h3>
+                        <div class="rightbox-line"></div>
+                        <h5 class="right-subtitle">사찰 운영의 현대화와 세계화를 추진, 2020년까지<br>
+                            가람 중창 불사를 원만회향하고 봉은불자 100만<br>
+                            시대를 열어 한국 불교를 밝혀 갈 중심<br>
+                            도량으로 도약하겠습니다.</h5>
+                    </div>
+                    <div class="sec02-rightbox sec02-rightbox4">
+                        <h3 class="right-title">우수 운영사찰</h3>
+                        <div class="rightbox-line"></div>
+                        <h5 class="right-subtitle">한국불교문화사업단(단장 원경 스님)은<br>
+                            지난해 템플스테이 운영 종합평가를<br>
+                            완료하고 5월13일 템플스테이<br>
+                            우수 운영사찰로 봉은사를<br>
+                            지정하였습니다.</h5>
+                    </div>
+                    <div class="sec02-rightbox sec02-rightbox5">
+                        <h3 class="right-title">불교용품점</h3>
+                        <div class="rightbox-line"></div>
+                        <h5 class="right-subtitle">불교용품점(음향각)은 봉은사 정문을 들어와<br>
+                            우측에 있는 건물로 부처께 올리는<br>
+                            공양물과 불교용품을 판매<br>
+                            하고 있습니다.</h5>
+                    </div>
+                </div>
+                <script>
+                    $(function(){
+                        $('.tab01').click(function(){
+                            $('.sec02-rightbox1').css("display","block");
+                            $(".sec02-rightbox2").css("display","none");
+                            $(".sec02-rightbox3").css("display", "none");
+                            $(".sec02-rightbox4").css("display", "none");
+                            $(".sec02-rightbox5").css("display", "none");
+                            $(".tab01").css("background", "rgba(255, 255, 255,0.9)");
+                            $(".tab01").css("color", "#000");
+                            $(".tab02").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab02").css("color", "#fff");
+                            $(".tab03").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab03").css("color", "#fff");
+                            $(".tab04").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab04").css("color", "#fff");
+                            $(".tab05").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab05").css("color", "#fff");
+                        });
+                        $('.tab02').click(function(){
+                            $('.sec02-rightbox2').css("display","block");
+                            $(".sec02-rightbox1").css("display","none");
+                            $(".sec02-rightbox3").css("display", "none");
+                            $(".sec02-rightbox4").css("display", "none");
+                            $(".sec02-rightbox5").css("display", "none");
+                            $(".tab02").css("background", "rgba(255, 255, 255,0.9)");
+                            $(".tab02").css("color", "#000");
+                            $(".tab01").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab01").css("color", "#fff");
+                            $(".tab03").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab03").css("color", "#fff");
+                            $(".tab04").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab04").css("color", "#fff");
+                            $(".tab05").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab05").css("color", "#fff");
+                        });
+                        $('.tab03').click(function(){
+                            $('.sec02-rightbox3').css("display","block");
+                            $(".sec02-rightbox1").css("display","none");
+                            $(".sec02-rightbox2").css("display", "none");
+                            $(".sec02-rightbox4").css("display", "none");
+                            $(".sec02-rightbox5").css("display", "none");
+                            $(".tab03").css("background", "rgba(255, 255, 255,0.9)");
+                            $(".tab03").css("color", "#000");
+                            $(".tab01").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab01").css("color", "#fff");
+                            $(".tab02").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab02").css("color", "#fff");
+                            $(".tab04").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab04").css("color", "#fff");
+                            $(".tab05").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab05").css("color", "#fff");
+                        });
+                        $('.tab04').click(function(){
+                            $('.sec02-rightbox4').css("display","block");
+                            $(".sec02-rightbox1").css("display","none");
+                            $(".sec02-rightbox2").css("display", "none");
+                            $(".sec02-rightbox3").css("display", "none");
+                            $(".sec02-rightbox5").css("display", "none");
+                            $(".tab04").css("background", "rgba(255, 255, 255,0.9)");
+                            $(".tab04").css("color", "#000");
+                            $(".tab01").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab01").css("color", "#fff");
+                            $(".tab02").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab02").css("color", "#fff");
+                            $(".tab03").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab03").css("color", "#fff");
+                            $(".tab05").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab05").css("color", "#fff");
+                        });
+                        $('.tab05').click(function(){
+                            $('.sec02-rightbox5').css("display","block");
+                            $(".sec02-rightbox1").css("display","none");
+                            $(".sec02-rightbox2").css("display", "none");
+                            $(".sec02-rightbox3").css("display", "none");
+                            $(".sec02-rightbox4").css("display", "none");
+                            $(".tab05").css("background", "rgba(255, 255, 255,0.9)");
+                            $(".tab05").css("color", "#000");
+                            $(".tab01").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab01").css("color", "#fff");
+                            $(".tab02").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab02").css("color", "#fff");
+                            $(".tab03").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab03").css("color", "#fff");
+                            $(".tab04").css("background", "rgba(0, 0, 0,0.75)");
+                            $(".tab04").css("color", "#fff");
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div id="section03">
+        <div id="mouse">
+            <p>SCROLL-DOWN</p>
+        </div>
+        <div class="wrap sec03-wrap">
+            <div class="sec03-header sec-header">
+                <h1 class="maintitle">조감도</h1>
+                <h3 class="subtitle">봉은사 내의 건물들의 위치를 한 눈에 보여드립니다.<br>
+                    대표적으로 법왕루, 미륵대불, 대웅전을 먼저 둘러보시는것을 추천드립니다.  </h3>
+            </div>
+            <div class="section03 sec03-article sec-article">
+                <div class="sec03-map">
+                    <img src="images/section03-map.png" alt="">
+                </div>
+                <div class="sec03-acodian">
+                    <div class="sec03-dt"><span>1. 불교용품점</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">불교용품점</p>
+                            <p class="sec03-dd-text">응향각(凝香閣)이라고도 하며 봉은사 정문을 들어와 우측에 있는 건물로 부처께 올리는 공양물과 불교용품을 판매하는 곳입니다. 응향은 향기가 모인다는 뜻으로 부처의 향기를 의미합니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>2. 진여문</span></div>
+                        <div class="sec03-dd">
+                            <p class="sec03-dd-title">진여문</p>
+                            <p class="sec03-dd-text">사찰에 들어서는 첫 번째 문을 일주문(一柱門)이라고 하는데 봉은사에서는 ‘진여문’이라고 합니다. 진여(眞如)란, 사물의 있는그대로의 모습을 뜻하며, 진여문에 들어선다는 것은 곧 부처님의 세상에 들어간다는 의미가 있습니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>3. 종루</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">종루 범종</p>
+                            <p class="sec03-dd-text">2018년에 새로 지어진 종루(범종)은 범종각이라고 불리우며 범종과 법고, 운판, 목어라는 사물이 봉인되어 있습니다. </p>
+                        </div>
+                    <div class="sec03-dt"><span>4. 연회루</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">연회루(연회다원)</p>
+                            <p class="sec03-dd-text">봉은사 경내 찻집인 연회다원은 예쁜 꽃차와 다과가 있는 마음의 여유를 찾을 수 있는 곳입니다. 코엑스가 보이는 전망에 앉아 힐링을 즐기실 수 있습니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>5. 화장실</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">화장실</p>
+                            <p class="sec03-dd-text">봉은사 경내 화장실은 진여문을 지나 법왕루를 지나치기 전 우측에 위치하고 있습니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>6. 법왕루</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">법왕루</p>
+                            <p class="sec03-dd-text">법왕루는 부처님이 계시는 곳을 말하며 대웅전과 마주하여 누각으로 세워져 있습니다. 1997년 완공한 법왕루는 사시예불을 올리는 장소로 이용되며, 대법회와 기도수행이 이뤄지고 있습니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>7. 전통문화체험관(1관)</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">전통문화체험관(1관)</p>
+                            <p class="sec03-dd-text">수준 높은 전통문화체험의 기회 확대와 체계적인 문화체험공간을 조성하고, 한국 전통문화인 사찰음식 다도 참선 등 전통문화체험을 통하여 관광객의 만족도를 높이고, 전통문화 가치 재발견 및 새로운 문화적 수요에 대처하고 있습니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>8. 전통문화체험관(2관)</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">전통문화체험관(2관)</p>
+                            <p class="sec03-dd-text">수준 높은 전통문화체험의 기회 확대와 체계적인 문화체험공간을 조성하고, 한국 전통문화인 사찰음식 다도 참선 등 전통문화체험을 통하여 관광객의 만족도를 높이고, 전통문화 가치 재발견 및 새로운 문화적 수요에 대처하고 있습니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>9. 미륵대불</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">미륵대불</p>
+                            <p class="sec03-dd-text">미륵대불은 1986년 영암큰스님께서 발원하였으며 10년간에 걸쳐 이루어진 대작불사로 1996년에 완공된 봉은사 성보로써 높이 23m에 달하는 국내 최대 크기의 부처님입니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>10. 3층석탑</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">3층석탑</p>
+                            <p class="sec03-dd-text">3층석탑은 불국사 석가탑을 닮은 아주 잘생긴 탑으로 석가의 진신사리 1과를 머금고 있습니다.</p>
+                        </div>
+                    <div class="sec03-dt"><span>11. 대웅전</span></div>
+                        <div class="sec03-dd sec03-dd-1">
+                            <p class="sec03-dd-title">대웅전</p>
+                            <p class="sec03-dd-text">대웅전은 1982년 새롭게 중창되었으며 새벽 예불부터 조석 예불이 항상 이루어져 불자들의 발길이 끊이지 않는 신행 활동의 중심입니다.</p>
+                        </div>
+                </div>
+
+            <!-- 아코디언 메뉴 스크립트 -->
+
+                <script>
+                    $('.sec03-dt').on('click', function () {
+            
+                if ($(this).hasClass('on')) {
+                    slideUp();
+                } else {
+                    slideUp();
+                    $(this).addClass('on').next().slideDown();
+                }
+                function slideUp() {
+                    $('.sec03-dt').removeClass('on').next().slideUp();
+                };
+                })
+                </script>
+
+            <!-- 아코디언 메뉴 스크립트 -->
+            </div>
+        </div>
+    </div>
+
+    <div id="section04">
+        <div id="mouse">
+            <p>SCROLL-DOWN</p>
+        </div>
+        <div class="wrap sec04-wrap">
+            <div class="sec04-header sec-header">
+                <h1 class="maintitle">사진첩
+                    <a href="https://one9601.github.io/onepage/bong-eunsa/photo-gallery" class="gallery-btn">
+                    &#43;</a>
+                </h1>
+                <h3 class="subtitle">봉은사의 각종 아름다운 사진들을 보여드립니다.</h3>
+            </div>
+            <div class="section04 sec04-article sec-article">
+                <div class="sec04-contents">
+                    <div class="gallery">
+                        <div class="gallery-bg-box">
+                            <div class="gallery-bg1"></div>
+                        </div>
+                        <div class="gallery-bg-box">
+                            <div class="gallery-bg2"></div>
+                        </div>
+                    </div>
+                    <div class="gallery">
+                        <div class="gallery-bg-box">
+                            <div class="gallery-bg3"></div>
+                        </div>
+                        <div class="gallery-bg-box">
+                            <div class="gallery-bg4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section05">
+        <div id="mouse">
+            <p>SCROLL-DOWN</p>
+        </div>
+        <div class="wrap sec05-wrap">
+            <div class="sec05-header sec-header">
+                <h1 class="maintitle">주변 볼거리</h1>
+                <h3 class="subtitle">봉은사에서 도보 3분거리에는 다양한 볼거리가 있는 코엑스가 있습니다.</h3>
+            </div>
+            <div class="section05 sec05-article sec-article">
+                <div class="section05-gallery">
+                    <div class="sec05-gallery-box">
+                        <div class="sec05-bg sec05-bg1">
+                            <div class="sec05-overlay"></div>
+                        </div>
+                        <div class="sec05-textbox">
+                        <p>별마당 도서관은 센트럴플라자 중심에 총 2,800㎡ (약 850평) 복층으로 구성되어 있습니다.13m 높이 서가의 은은한 불빛이 공간 전체를 부드럽게 감싸는 편안한 서재를 컨셉으로 다양한 테이블과 노트북 작업이 가능하도록 콘센트가 마련되어 있습니다.</p>
+                        <div class="heading">
+                            <h2><span>별마당도서관</span></h2>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section05-gallery">
+                    <div class="sec05-gallery-box">
+                        <div class="sec05-bg sec05-bg2">
+                            <div class="sec05-overlay"></div>
+                        </div>
+                        <div class="sec05-textbox">
+                        <p>3세대의 온가족이 함께 즐길 수 있는곳 , 650여종 4만여 수중생물이 사는곳 아쿠아리움에서 110여 마리의 상어, 희귀 멸종위기종 초식동물 매너티 등을 만나 보실 수 있습니다.</p>
+                        <div class="heading">
+                            <h2><span>아쿠아리움</span></h2>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section05-gallery">
+                    <div class="sec05-gallery-box">
+                        <div class="sec05-bg sec05-bg3">
+                            <div class="sec05-overlay"></div>
+                        </div>
+                        <div class="sec05-textbox">
+                        <p>2004년 아시아 최고의 영화관 선정, 2005년 관객수 619만으로 월드 레코드 등재
+                            VIP 시사회, 제작발표회, 레드 카펫 행사 등 다양한 행사 유치</p>
+                        <div class="heading">
+                            <h2><span>메가박스</span></h2>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                $(".hover").mouseleave(
+                function () {
+                $(this).removeClass("hover");
+                }
+              );
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div id="section06">
+        <div class="wrap sec06-wrap">
+            <div class="sec06-header sec-header">
+                <h1 class="maintitle">오시는길</h1>
+                <h3 class="subtitle">봉은사로 오시는 길을 소개합니다.</h3>
+            </div>
+            <div class="section06 sec06-article sec-article">
+                <div class="sec06-map">
+                    <div id="map" style="width:100%;height:470px;">
+                    </div>
+                </div>
+                <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2be379809e8d8686fbb9364ab4a57666"></script>
+                <script>
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = { 
+                        center: new kakao.maps.LatLng(37.515056, 127.057430), // 지도의 중심좌표
+                        level: 4 // 지도의 확대 레벨
+                    };
+
+                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                var imageSrc = 'images/mapicon.png', // 마커이미지의 주소입니다    
+                    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+                    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+                    
+                // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+                var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                    markerPosition = new kakao.maps.LatLng(37.515056, 127.057430); // 마커가 표시될 위치입니다
+
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition, 
+                    image: markerImage // 마커이미지 설정 
+                });
+
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map); 
+                // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                var content = '<div class="customoverlay">' +
+                    '  <a href="http://kko.to/P0Z-b89DT" target="_blank">' +
+                    '    <span class="title">봉은사</span>' +
+                    '  </a>' +
+                    '</div>';
+        
+                // 커스텀 오버레이가 표시될 위치입니다 
+                var position = new kakao.maps.LatLng(37.515056, 127.057430);  
+        
+                // 커스텀 오버레이를 생성합니다
+                var customOverlay = new kakao.maps.CustomOverlay({
+                    map: map,
+                    position: position,
+                    content: content,
+                    yAnchor: 1 
+                }); 
+                </script>
+
+        <!-- sec06-map script end -->
+
+            <div class="footer">
+                <div class="footer-text">
+                    <p class="footer-toptext">전화번호</p>
+                    <p class="footer-bottomtext">02-3218-4800</p>
+                </div>
+                <div class="footer-text">
+                    <p class="footer-toptext">주소</p>
+                    <p class="footer-bottomtext">서울시 강남구 봉은사로 531</p>
+                </div>
+                <div class="footer-text">
+                    <p class="footer-toptext">버스 이용안내</p>
+                    <p class="footer-bottomtext">3412, 3411, 2415, 342, N61, 143</p>
+                </div>
+                <div class="footer-text">
+                    <p class="footer-toptext">지하철 이용안내</p>
+                    <p class="footer-bottomtext">
+                        2호선 : 삼성역 6번출구 아셈타워 방향 600m 이후 좌측 봉은사진입로<br>
+                        7호선 : 청담역 2번출구 경기고방향 800m 이후 우측 봉은사진입로<br>
+                        9호선 : 봉은사역 1번출구 100m 이후 봉은사 입구<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        /**스크롤이 설정한 높이 이상 내려갔을때 스타일추가하기**/
+        if (jQuery(window).width() > 0) {
+        jQuery(window).on("scroll",function(ev){
+            if(jQuery(window).scrollTop() > 150 ) { /**높이 픽셀 조정**/
+                jQuery('.menu_box').addClass('fixed');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+            }
+            else{
+                jQuery('.menu_box').removeClass('fixed');
+            }
+            return false;
+        });
+        }
+        
+        /**마우스 부드럽게 해당위치로 이동**/
+        $(function(){
+           $('a[href^=#]').click(function() {
+              var speed = 800;
+              var href= $(this).attr("href");
+              var target = $(href == "#" || href == "" ? 'html' : href);
+              var position = target.offset().top;
+              $('body,html').animate({scrollTop:position}, speed, 'swing');
+              return false;
+           });
+        });  
+    </script>
+
+
+    
+</body>
+</html>

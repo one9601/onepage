@@ -1,0 +1,354 @@
+@font-face { font-family: 'SDKukdetopokki-Lt'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff'); font-weight: normal; font-style: normal; }
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+
+body{
+	font-family: 'NanumBarunGothic', sans-serif;
+}
+
+/* goBack */
+.goBack-box{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+.goback{
+    border: 0;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 50px;
+    float: left;
+ }
+/* header 시작 */
+.header{
+    width: 100%;
+    height: 470px;
+    background: url(../images/header-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    background-attachment: fixed;
+}
+.header-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1 ;
+}
+.header-textbox{
+    position: absolute;
+    font-family: 'SDKukdetopokki-Lt';
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 2 ;
+    text-align: center;
+}
+.header-textbox h1{
+    color: #fff;
+    font-size: 50px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #fff;
+}
+.header-textbox p{
+    color: #fff;
+    font-size: 30px;
+    padding-top: 20px;
+}
+/* header 끝 */
+
+/* gallery-container 시작 */
+.gallery-article{
+    width: 66%;
+    margin: 0 auto;
+}
+.gallery-box{
+    width: 100%;
+    height: 299px;
+    display: flex;
+}
+.gallery-container{
+    margin-top: 30px;
+}
+.gallery-box{
+    border-top: 3px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 30px 0;
+}
+.gallery-bg1{
+    background: url(../images/header-bg0.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 50%;
+    margin : 0 20px;
+}
+.gallery-textbox{
+    margin: 0 20px;
+    width: 50%;
+}
+.gallery-textbox>p:first-child{
+    font-size: 25px;
+    height: 50px;
+}
+.gallery-textbox>p:nth-child(2){
+    font-size: 32px;
+    height: 215px;
+}
+.gallery-textbox>p:last-child{
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+.gallery-textbox span{
+    color: #666;
+}
+
+/* gallery-container 끝 */
+
+/* gallery-list 시작 */
+.list-box1 , .list-box2, .list-box3{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gallery-list{
+    margin-top: 20px;
+}
+.conbx{
+    border: 1px solid #cccccc;
+    height: 566px;
+    padding: 20px;
+    width: 29%;
+    position: relative;
+}
+
+.conbx img{
+    width: 100%;
+    height: 464px;
+}
+.img-text{
+    position: absolute;
+    top: 83%;
+}
+.img-text p:first-child{
+    font-size: 14px;
+    color: #666;
+    height: 50px;
+}
+.img-text p:last-child{
+    font-size: 18px;
+    color: #181818;
+    width: 216px;
+}
+
+.modal{
+    height: 800px !important;
+    max-width: 1100px !important;
+    margin: 0 auto;
+}
+.modal-conbx{
+    width: 1000px;
+    height: 680px !important;
+    border: 1px solid #cccccc;
+    height: auto;
+    padding: 20px;
+    position: relative;
+}
+.modal-img-text{
+    position: absolute;
+    top: 88%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.modal-img-text p:first-child{
+    font-size: 16px;
+    color: #666;
+    height: 50px;
+}
+.modal-img-text p:last-child{
+    font-size: 20px;
+    color: #181818;
+}
+
+@media(max-width:1250px){
+    .modal{
+        height: 85% !important;
+        max-width: 100% !important;
+    }
+    .modal-conbx{
+        width: 100%;
+        height: 100% !important;
+        border: 1px solid #cccccc;
+        padding: 0;
+        padding-bottom: 100px;
+    }
+    .modal img{
+        width: 100%;
+    }
+    .modal-img-text{
+        top: 88%;
+    }
+}
+@media(max-width:1100px){
+    .gallery-article{
+        width: 95%;
+    }
+    .modal-conbx{
+        padding-bottom: 120px;
+    }
+    .modal-img-text{
+        top: 85%;
+    }
+    .modal{
+        height: 75% !important;
+    }
+}
+
+@media(max-width:950px){
+    .gallery-box{
+        height: auto;
+        flex-direction: column;
+    }
+    .gallery-bg1{
+        width: 100%;
+        margin: 0;
+    }
+    .gallery-textbox{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .gallery-textbox>p:nth-child(2){
+        height: 50px;
+    }
+
+}
+@media(max-width:768px){
+    .list-box1 , .list-box2, .list-box3{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .conbx{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .gallery-list{
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .img-text{
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%,0);
+        text-align: center;
+    }
+    .img-text p:last-child{
+        font-size: 17px;
+    }
+
+    /* modal */
+
+    .modal-img-text{
+        top: 80%;
+    }
+    .modal{
+        height: 60% !important;
+    }
+}
+
+@media(max-width:650px){
+
+    .header-textbox h1{
+        font-size: 35px;
+    }
+    .header-textbox p{
+        font-size: 20px;
+    }
+    /* modal */
+
+    .modal-img-text{
+        top: 70%;
+    }
+    .modal{
+        height: 45% !important;
+    }
+    .modal-img-text p:last-child{
+        width: 300px;
+    }
+    .modal-img-text p:last-child{
+        font-size: 18px;
+    }
+}
+@media(max-width:520px){
+    /* gallery-container start */
+
+    .gallery-textbox>p:first-child{
+        font-size: 16px;
+    }
+    .gallery-textbox>p:nth-child(2){
+        font-size: 18px;
+    }
+
+    /* gallery-container end */
+    
+    /* gallery-list start */
+
+    .gallery-list{
+        width: 95%;
+    }
+
+    /* gallery-list end */
+
+}
+@media(max-width:420px){
+
+    /* header */
+    .header-textbox h1{
+        font-size: 30px;
+    }
+    .header-textbox p{
+        font-size: 18px;
+    }
+    /* header */
+
+    /* modal start*/
+
+    .modal-img-text{
+        top: 60%;
+    }
+    .modal{
+        height: 40% !important;
+    }
+    /* modal end */
+}
+@media(max-width:360px){
+
+    /* header-text */
+
+    .header-textbox h1{
+        font-size: 26px;
+    }
+    /* header-text */
+
+    /* modal start */
+
+    .modal-img-text p:last-child{
+        font-size: 16px;
+    }
+
+    /* modal end */
+}
