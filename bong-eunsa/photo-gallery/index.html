@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery 3.2.1 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+    <!-- fontawsome -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="goBack-box">
+        <button onclick="goBack()" class="goback">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+
+    <script>
+        function goBack() {
+        window.history.back();
+        }
+    </script>
+    <div class="gallery">
+        <div class="header">
+            <div class="header-overlay"></div>
+            <div class="header-textbox">
+                <h1>봉은사 사진첩</h1>
+                <p>봉은사를 한눈에 둘러보실 수 있습니다</p>
+            </div>
+        </div>
+        <div class="gallery-article">
+            <div class="gallery-container">
+                <div class="gallery-box">
+                    <div class="gallery-bg1"></div>
+                    <div class="gallery-textbox">
+                        <p>보물 제 1819호</p>
+                        <p>봉은사 목조석가여래 삼불좌상</p>
+                        <p>게시일 <span>2020.09.10</span></p>
+                    </div>
+                </div>
+            </div>
+        <!-- gallery flex -->
+            <div class="gallery-list">
+                <div class="list-box1">
+                    <div class="conbx"><a href="#img1" rel="modal:open"><img src="images/bg0.png" alt="목조석가여래 삼불좌상 이미지">
+                        <div class="img-text">
+                            <p>보물 제 1819호</p>
+                            <p>봉은사 목조석가여래 삼불좌상</p>
+                        </div>
+                    </a></div>
+                    
+                    <div id="img1" class="modal modal-img bg-box ">
+                        <div>
+                            <div class="modal-conbx">
+                                <img src="images/modal-bg0.png" alt="">
+                                <span class="modal-txt">
+                                    <div class="modal-img-text">
+                                        <p>보물 제 1819호</p>
+                                        <p>봉은사 목조석가여래 삼불좌상</p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conbx"><a href="#img2" rel="modal:open"><img src="images/bg1.png" alt="미륵대불 이미지">
+                        <div class="img-text">
+                            <p>용화정토 원불 봉안 불사</p>
+                            <p>봉은사 미륵대불</p>
+                        </div>
+                    </a></div>
+                    
+                    <div id="img2" class="modal modal-img bg-box ">
+                        <div>
+                            <div class="modal-conbx">
+                                <img src="images/modal-bg1.png" alt="">
+                                <span class="modal-txt">
+                                    <div class="modal-img-text">
+                                        <p>용화정토 원불 봉안 불사</p>
+                                        <p>봉은사 미륵대불</p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conbx"><a href="#img3" rel="modal:open"><img src="images/bg2.png" alt="봉은사 소각장 이미지">
+                        <div class="img-text">
+                            <p>봉은사 소각장</p>
+                            <p>봉은사 소각장</p>
+                        </div>
+                    </a></div>
+                    
+                    <div id="img3" class="modal modal-img bg-box ">
+                        <div>
+                            <div class="modal-conbx">
+                                <img src="images/modal-bg2.png" alt="">
+                                <span class="modal-txt">
+                                    <div class="modal-img-text">
+                                        <p>봉은사 소각장</p>
+                                        <p>봉은사 소각장</p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-box2">
+                    <div class="conbx"><a href="#img4" rel="modal:open"><img src="images/bg3.png" alt="연꽃 이미지">
+                        <div class="img-text">
+                            <p>봉은사 연꽃축제</p>
+                            <p>봉은사 연꽃축제</p>
+                        </div>
+                    </a></div>
+                    
+                    <div id="img4" class="modal modal-img bg-box ">
+                        <div>
+                            <div class="modal-conbx">
+                                <img src="images/modal-bg3.png" alt="">
+                                <span class="modal-txt">
+                                    <div class="modal-img-text">
+                                        <p>봉은사 연꽃축제</p>
+                                        <p>봉은사 연꽃축제</p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conbx"><a href="#img5" rel="modal:open"><img src="images/bg4.png" alt="연회루 찻집 야외 테이블 이미지">
+                        <div class="img-text">
+                            <p>연회다원(연회루)</p>
+                            <p>봉은사 찻집 야외 테이블</p>
+                        </div>
+                    </a></div>
+                    
+                    <div id="img5" class="modal modal-img bg-box ">
+                        <div>
+                            <div class="modal-conbx">
+                                <img src="images/modal-bg4.png" alt="">
+                                <span class="modal-txt">
+                                    <div class="modal-img-text">
+                                        <p>연회다원(연회루)</p>
+                                        <p>봉은사 찻집 야외 테이블</p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conbx"><a href="#img6" rel="modal:open"><img src="images/bg5.png" alt="선불당 사진 이미지">
+                        <div class="img-text">
+                            <p>선불당 하늘</p>
+                            <p>선불당에서 찍은 하늘</p>
+                        </div>
+                    </a></div>
+                    
+                    <div id="img6" class="modal modal-img bg-box ">
+                        <div>
+                            <div class="modal-conbx">
+                                <img src="images/modal-bg5.png" alt="">
+                                <span class="modal-txt">
+                                    <div class="modal-img-text">
+                                        <p>선불당 하늘</p>
+                                        <p>선불당에서 찍은 하늘</p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-box3">
+                    <div class="conbx"><a href="#img7" rel="modal:open"><img src="images/bg6.png" alt="종루 이미지">
+                        <div class="img-text">
+                            <p>봉은사 종루</p>
+                            <p>봉은사 종루(범종)</p>
+                        </div>
+                    </a></div>
+                    
+                    <div id="img7" class="modal modal-img bg-box ">
+                        <div>
+                            <div class="modal-conbx">
+                                <img src="images/modal-bg6.png" alt="">
+                                <span class="modal-txt">
+                                    <div class="modal-img-text">
+                                        <p>봉은사 종루</p>
+                                        <p>봉은사 종루(범종)</p>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
