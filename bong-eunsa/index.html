@@ -17,6 +17,41 @@
 <!-- kakaomapstyle css -->
 </head>
 <body>
+    <!-- modal -->
+    <div id="myModal" class="Modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p style="text-align:center;">
+                <span style="font-size: 14px;">
+                    <b>
+                        <span style="font-size: 24px;">
+                            공지사항</span></b></span></p>
+            <p style="text-align: center; line-height:1.5;"><br>100% 직접 촬영하고, 편집한 사이트 입니다.</p>
+            <p><br></p>
+            <div style="cursor: pointer; text-align: center; padding-bottom:10px; padding-top:10px; background: #0c4606; color: #fff;" onclick="close_pop();">
+                <span class="pop_bt" style="font-size: 13px;">
+                    닫기
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <script>
+        jQuery(document).ready(function(){
+            $("#myModal").show();
+        });
+
+        // 팝업 close 기능
+
+        function close_pop(flag){
+            $("#myModal").hide();
+        };
+
+    </script>
+
+    <!-- modal end -->
+
     <div id="section01">
         <div class="menu_box">
             <div class="header">
@@ -346,16 +381,16 @@
                 <script>
                     $('.sec03-dt').on('click', function () {
             
-            if ($(this).hasClass('on')) {
-                slideUp();
-            } else {
-                slideUp();
-                $(this).addClass('on').next().slideDown();
-            }
-            function slideUp() {
-                $('.sec03-dt').removeClass('on').next().slideUp();
-            };
-            })
+                if ($(this).hasClass('on')) {
+                    slideUp();
+                } else {
+                    slideUp();
+                    $(this).addClass('on').next().slideDown();
+                }
+                function slideUp() {
+                    $('.sec03-dt').removeClass('on').next().slideUp();
+                };
+                })
                 </script>
 
             <!-- 아코디언 메뉴 스크립트 -->

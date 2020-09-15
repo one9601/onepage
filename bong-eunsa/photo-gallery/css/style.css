@@ -4,10 +4,28 @@
 body{
 	font-family: 'NanumBarunGothic', sans-serif;
 }
+
+/* goBack */
+.goBack-box{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+.goback{
+    border: 0;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 50px;
+    float: left;
+ }
 /* header 시작 */
 .header{
     width: 100%;
-    height: 420px;
+    height: 470px;
     background: url(../images/header-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,104 +107,30 @@ body{
 /* gallery-container 끝 */
 
 /* gallery-list 시작 */
-.gallery-list{
-    width: 100%;
-    height: 464px;
-    padding-top: 20px;
-}
-.list-box1 ,.list-box2 {
+.list-box1 , .list-box2, .list-box3{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.list-box3{
-    display: flex;
-    margin-bottom: 20px;
+
+.gallery-list{
+    margin-top: 20px;
 }
-.list-box3>div+div{
-    margin-left: 1.5%;
-}
-.bg-box{
-    width: 29%;
-    height: 564px;
-    border: 1px solid #ccc;
+.conbx{
+    border: 1px solid #cccccc;
+    height: 566px;
     padding: 20px;
-}
-.bg-box>.img1{
-    width: 100%;
-    height: 464px;
-    background: url(../images/bg0.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    width: 29%;
     position: relative;
 }
-.bg-box>.img2{
+
+.conbx img{
     width: 100%;
     height: 464px;
-    background: url(../images/bg1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
-.bg-box>.img3{
-    width: 100%;
-    height: 464px;
-    background: url(../images/bg2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.bg-box>.img4{
-    width: 100%;
-    height: 464px;
-    background: url(../images/bg3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.bg-box>.img5{
-    width: 100%;
-    height: 464px;
-    background: url(../images/bg4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.bg-box>.img6{
-    width: 100%;
-    height: 464px;
-    background: url(../images/bg5.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.bg-box>.img7{
-    width: 100%;
-    height: 464px;
-    background: url(../images/bg6.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.bg-box>.img8{
-    width: 100%;
-    height: 464px;
-    background: url(../images/bg7.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.bg-box .img-text{
+.img-text{
     position: absolute;
-    top: 105%;
+    top: 83%;
 }
 .img-text p:first-child{
     font-size: 14px;
@@ -199,85 +143,198 @@ body{
     width: 216px;
 }
 
-@media(max-width:767px){
-    /* gallery-list 시작 */
-    .list-box1 ,.list-box2 ,.list-box3{
-        flex-direction: column;
+.modal{
+    height: 800px !important;
+    max-width: 1100px !important;
+    margin: 0 auto;
+}
+.modal-conbx{
+    width: 1000px;
+    height: 680px !important;
+    border: 1px solid #cccccc;
+    height: auto;
+    padding: 20px;
+    position: relative;
+}
+.modal-img-text{
+    position: absolute;
+    top: 88%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.modal-img-text p:first-child{
+    font-size: 16px;
+    color: #666;
+    height: 50px;
+}
+.modal-img-text p:last-child{
+    font-size: 20px;
+    color: #181818;
+}
+
+@media(max-width:1250px){
+    .modal{
+        height: 85% !important;
+        max-width: 100% !important;
     }
-    .bg-box{
+    .modal-conbx{
+        width: 100%;
+        height: 100% !important;
+        border: 1px solid #cccccc;
+        padding: 0;
+        padding-bottom: 100px;
+    }
+    .modal img{
         width: 100%;
     }
-    .img-text{
-        left: 50%;
-        transform:translateX(-50%)
+    .modal-img-text{
+        top: 88%;
     }
-    .img-text p{
-        text-align: center;
+}
+@media(max-width:1100px){
+    .gallery-article{
+        width: 95%;
     }
-    /* gallery-list 끝 */
-    /* gallery article 시작*/
+    .modal-conbx{
+        padding-bottom: 120px;
+    }
+    .modal-img-text{
+        top: 85%;
+    }
+    .modal{
+        height: 75% !important;
+    }
+}
+
+@media(max-width:950px){
     .gallery-box{
-        flex-direction: column;
         height: auto;
+        flex-direction: column;
     }
     .gallery-bg1{
         width: 100%;
         margin: 0;
     }
     .gallery-textbox{
-        margin: 20px 0 0 0;
+        margin: 0;
         width: 100%;
         text-align: center;
+        padding-top: 30px;
     }
     .gallery-textbox>p:nth-child(2){
         height: 50px;
     }
 
-    .gallery-article{
-        width: 80%;
-    }
-    /* gallery article 끝 */
-
-    .list-box1 ,.list-box2 ,.list-box3{
+}
+@media(max-width:768px){
+    .list-box1 , .list-box2, .list-box3{
+        flex-direction: column;
         margin-bottom: 0;
     }
-    .list-box1>div{
-        margin-bottom: 20px;
-    }
-    .list-box2>div{
-        margin-bottom: 20px;
-    }
-    .list-box3>div{
-        margin-bottom: 20px;
-    }
-    .list-box3>div+div{
-        margin-left: 0 !important;
-    }
-    .bg-box{
+    .conbx{
+        width: 100%;
         padding: 0;
+        margin-bottom: 20px;
+    }
+    .gallery-list{
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .img-text{
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%,0);
+        text-align: center;
+    }
+    .img-text p:last-child{
+        font-size: 17px;
+    }
+
+    /* modal */
+
+    .modal-img-text{
+        top: 80%;
+    }
+    .modal{
+        height: 60% !important;
     }
 }
-@media(max-width:600px){
-    /* header 시작 */
-    .header{
-        height: 300px;
-    }
+
+@media(max-width:650px){
+
     .header-textbox h1{
         font-size: 35px;
     }
-    /* header 끝 */
+    /* modal */
 
-    /* gallery article 시작*/
-    .gallery-textbox p:first-child{
+    .modal-img-text{
+        top: 70%;
+    }
+    .modal{
+        height: 45% !important;
+    }
+    .modal-img-text p:last-child{
+        width: 300px;
+    }
+    .modal-img-text p:last-child{
+        font-size: 18px;
+    }
+}
+@media(max-width:520px){
+    /* gallery-container start */
+
+    .gallery-textbox>p:first-child{
         font-size: 16px;
     }
-    .gallery-textbox p:nth-child(2){
-        font-size: 22px;
+    .gallery-textbox>p:nth-child(2){
+        font-size: 18px;
     }
+
+    /* gallery-container end */
+    
+    /* gallery-list start */
+
+    .gallery-list{
+        width: 95%;
+    }
+
+    /* gallery-list end */
 
 }
 @media(max-width:420px){
+
+    /* header */
     .header-textbox h1{
-        font-size: 27px;
+        font-size: 30px;
     }
+    /* header */
+
+    /* modal start*/
+
+    .modal-img-text{
+        top: 60%;
+    }
+    .modal{
+        height: 40% !important;
+    }
+    /* modal end */
+}
+@media(max-width:360px){
+
+    /* header-text */
+
+    .header-textbox h1{
+        font-size: 26px;
+    }
+    /* header-text */
+
+    /* modal start */
+
+    .modal-img-text p:last-child{
+        font-size: 16px;
+    }
+
+    /* modal end */
 }
