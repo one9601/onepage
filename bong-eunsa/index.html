@@ -90,9 +90,11 @@
                 <!-- 메뉴 목록 누르면 네비 숨김 -->
                 <script>
                     $(document).ready(function(){
-                        $('.a').click(function(){
-                            $(".menuNav").hide();
-                        });
+                         $('.a').click(function(){
+                             if ( document.body.clientWidth <= 1400) { 
+                                $(".menuNav").hide();
+                             }
+                         });
                     });
                 </script>
                 
@@ -183,11 +185,11 @@
                 <div class="sec02-con1">
                     <div class="sec02-leftbox">
                         <ul class="con1-tab_box">
-                            <li class="tab01"><a href="#">봉은사 인사말</a></li>
-                            <li class="tab02"><a href="#">봉은사 활동</a></li>
-                            <li class="tab03"><a href="#1">봉은비전</a></li>
-                            <li class="tab04"><a href="#">우수 운영사찰</a></li>
-                            <li class="tab05"><a href="#">불교용품</a></li>
+                            <li class="tab01"><a href="javascript:void(0);">봉은사 인사말</a></li>
+                            <li class="tab02"><a href="javascript:void(0);">봉은사 활동</a></li>
+                            <li class="tab03"><a href="javascript:void(0);">봉은비전</a></li>
+                            <li class="tab04"><a href="javascript:void(0);">우수 운영사찰</a></li>
+                            <li class="tab05"><a href="javascript:void(0);">불교용품</a></li>
                         </ul>
                     </div>
                 </div>

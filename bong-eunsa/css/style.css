@@ -1001,6 +1001,9 @@ body{
 
 }
 @media(max-width:520px){
+    .slide-1 , .slide-2{
+        padding-bottom: 25%;
+    }
     /* mouse */
     #mouse{
         width: 20px;
